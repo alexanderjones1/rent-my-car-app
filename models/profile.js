@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const profileSchema = new Schema({
   name: String,
-  avatar: Image,
-  cars: [carSchema]
+  avatar: String,
+  cars: { type: Schema.Types.ObjectId, ref: 'Car' }
 }, {
   timestamps: true
 })

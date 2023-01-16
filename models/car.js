@@ -12,8 +12,8 @@ const carSchema = new Schema({
   timestamps: true
 })
 
-const Profile = mongoose.model('Profile', profileSchema)
+const Car = mongoose.model('Car', carSchema)
 
 export {
-  Profile,
+  Car,
 }
