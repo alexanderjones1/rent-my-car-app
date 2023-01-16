@@ -2,10 +2,12 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const profileSchema = new Schema({
-  name: String,
-  avatar: Image,
-  cars: [carSchema]
+const carSchema = new Schema({
+  make: String,
+  model: String,
+  color: String,
+  price: String,
+  renters: { type: Schema.Types.ObjectId, ref: 'Renter' },
 }, {
   timestamps: true
 })
