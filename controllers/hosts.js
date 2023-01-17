@@ -1,11 +1,11 @@
-import { Profile } from '../models/profile.js'
+import { Host } from '../models/host.js'
 
 function newHost(req, res) {
-  Profile.find({})
-  .then(profiles => {
+  Host.find({})
+  .then(hosts => {
     res.render('hosts/new', {
       title: "New Host",
-      profiles,
+      hosts,
     })
   })
   .catch(err => {
@@ -14,13 +14,36 @@ function newHost(req, res) {
 }
 
 function create(req, res) {
-  Profile.create(req.body)
+  req.body.name = req.user.profile.name
+  req.body.email = req.user.email
+  req.body.eligible = req.body.age > 20 ? true : false
+  Host.create(req.body)
   .then(host => {
-    res.redirect('/cars/new')
+    res.redirect(`/hosts/${host._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/hosts/new')
+  })
+}
+
+function show(req, res) {
+  Host.findById(req.params.id)
+  .populate("user")
+  .then(host => {
+    res.render('hosts/show', {
+      host,
+      title: "Host Detail"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/hosts/new')
   })
 }
 
 export {
   newHost as new,
-  create
+  create,
+  show
 }

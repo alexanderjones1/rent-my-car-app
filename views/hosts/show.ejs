@@ -1,0 +1,15 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/hosts/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+<section>
+  <div><%= user.profile.name %></div>
+  <img src="<%= user.profile.avatar %>">
+  <div><%= host.age %></div>
+  <div><%= user.email %></div>
+  <div><%= host.eligible %></div>
+</section>
+
+<%- include("../partials/footer") %>
