@@ -5,7 +5,21 @@
 <body>
   <nav>
     <% if (user) { %>
-      <a href="/">Rent-My-Car</a>
+      <section id="logo">
+        <a href="/">Rent-My-Car</a>
+      </section>
+      <section id="paths">
+        <a 
+        href="/cars/index" <%- title === "ALL CARS" ? 'class="active"' : "" %>
+        >
+        Search for a car!
+      </a>
+      <a 
+        href="/hosts/new" <%- title === "New Host" ? 'class="active"' : "" %>
+        >
+        Become A Host
+      </a>
+      </section>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>

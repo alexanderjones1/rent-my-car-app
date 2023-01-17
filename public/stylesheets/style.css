@@ -39,3 +39,7 @@ main {
 .right {
   margin-left: auto;
 }
+
+#paths {
+  justify-content: flex-end;
+}
