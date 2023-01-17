@@ -44,8 +44,23 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Host.findById(req.params.id)
+  .then(host => {
+    res.render("hosts/edit", {
+      host,
+      title: "Edit Host Details"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 export {
   newHost as new,
   create,
-  show
+  show,
+  edit
 }

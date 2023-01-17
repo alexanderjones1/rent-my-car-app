@@ -6,10 +6,14 @@
   <h1><%= title %></h1>
 <section>
   <div><%= host.name %></div>
+  <a href="/hosts/<%= host._id %>/edit">
+    <button>Edit Profile</button>
+  </a>
   <img src="<%= host.avatar %>">
   <div><%= host.age %></div>
   <div><%= host.email %></div>
   <div><%= host.eligible %></div>
+
 </section>
 
 <%- include("../partials/footer") %>
