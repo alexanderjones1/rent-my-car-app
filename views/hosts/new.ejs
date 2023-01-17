@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/hosts/new.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/hosts" method="POST">
+    <input placeholder="Name" required type="text" name="name" id="name-input">
+    <input placeholder="Age" type="number" name="Age" id="age-input">
+    <button type="submit">Let's do this!</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>

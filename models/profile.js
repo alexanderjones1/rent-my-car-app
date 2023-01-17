@@ -3,8 +3,10 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const profileSchema = new Schema({
-  name: String,
   avatar: String,
+  name: String,
+  age: Number,
+  // email: Profile.email,
   cars: { type: Schema.Types.ObjectId, ref: 'Car' }
 }, {
   timestamps: true
