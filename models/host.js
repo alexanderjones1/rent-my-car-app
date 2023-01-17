@@ -6,7 +6,9 @@ const hostSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   age: Number,
   eligible: Boolean,
-  // email: Profile.email,
+  name: String,
+  email: String,
+  avatar: String,
   cars: { type: Schema.Types.ObjectId, ref: 'Car' }
 }, {
   timestamps: true

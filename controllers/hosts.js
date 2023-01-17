@@ -16,7 +16,9 @@ function newHost(req, res) {
 function create(req, res) {
   req.body.name = req.user.profile.name
   req.body.email = req.user.email
+  req.body.avatar = req.user.profile.avatar
   req.body.eligible = req.body.age > 20 ? true : false
+  console.log(req.body);
   Host.create(req.body)
   .then(host => {
     res.redirect(`/hosts/${host._id}`)
