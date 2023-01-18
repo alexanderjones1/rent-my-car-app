@@ -13,15 +13,30 @@
   <div><%= host.age %></div>
   <div><%= host.email %></div>
   <div><%= host.eligible %></div>
+
+  <h2>Cars</h2>
   <% if (host.cars.length) { %>
-    <h3>Here will be your car!</h3>
+    <% host.cars.forEach(car => { %>
+      <%= car.make %>
+      <%= car.model %>
+      <%= car.color %>
+      <%= car.price %>
+    <% }) %>
   <% } else { %>
     <h3>No cars have been added to your profile.</h3>
-    <a href="/cars/new" <%- title === "Add Car" ? 'class="active"' : "" %>
-    >
-    Add Car
-    </a>
   <% } %>
+
+  <p>Tell me about your car!</p>
+  <form 
+    id="new-form" 
+    action="/hosts/<%= host._id %>/cars" 
+    method="POST">
+    <input placeholder="Make" type="text" name="make" id="make-input">
+    <input placeholder="Model" type="text" name="model" id="model-input">
+    <input placeholder="Color" type="text" name="color" id="color-input">
+    <input placeholder="Daily Rate" type="number" name="price" id="price-input">
+      <button type="submit">Add Car</button>
+  </form>
 </section>
 
 <%- include("../partials/footer") %>
