@@ -2,6 +2,16 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const carSchema = new Schema({
+  make: String,
+  model: String,
+  color: String,
+  price: String,
+  renters: { type: Schema.Types.ObjectId, ref: 'Renter' },
+}, {
+  timestamps: true
+})
+
 const hostSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   age: Number,
@@ -9,7 +19,7 @@ const hostSchema = new Schema({
   name: String,
   email: String,
   avatar: String,
-  cars: [{ type: Schema.Types.ObjectId, ref: 'Car' }]
+  cars: [carSchema]
 }, {
   timestamps: true
 })
@@ -18,4 +28,5 @@ const Host = mongoose.model('Host', hostSchema)
 
 export {
   Host,
+  Car,
 }
