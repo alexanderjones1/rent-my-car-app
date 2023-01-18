@@ -14,3 +14,21 @@ a {
   justify-content: center;
   background-color: white;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px;
+}
+
+#price-input {
+  margin-bottom: 20px;
+}
+
+#add-car {
+  width: 100px;
+  border-radius: 50px;
+}
