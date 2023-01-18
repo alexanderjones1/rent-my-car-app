@@ -10,9 +10,9 @@
     <button>Edit Profile</button>
   </a>
   <img id="avatar" src="<%= host.avatar %>">
-  <div><%= host.age %></div>
+  <div><%= `${host.age} years old.` %></div>
   <div><%= host.email %></div>
-  <div><%= host.eligible %></div>
+  <div><%- host.eligible ? "Eligible to drive!" : "Not eligible to drive until 21 years of age." %></div>
 
   <h2>Cars</h2>
   <% if (host.cars.length) { %>
@@ -20,7 +20,7 @@
       <%= car.make %>
       <%= car.model %>
       <%= car.color %>
-      <%= car.price %>
+      <%= `$${car.price}` %>
     <% }) %>
   <% } else { %>
     <h3>No cars have been added to your profile.</h3>
