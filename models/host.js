@@ -28,5 +28,4 @@ const Host = mongoose.model('Host', hostSchema)
 
 export {
   Host,
-  Car,
 }
