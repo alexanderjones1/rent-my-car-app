@@ -5,6 +5,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 router.get('/', isLoggedIn, hostsCtrl.carsIndex)
+router.get('/:id', hostsCtrl.showCar)
 
 export {
   router,

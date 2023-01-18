@@ -1,5 +1,6 @@
 import { Host } from '../models/host.js'
 
+
 function newHost(req, res) {
   Host.find({})
   .then(hosts => {
@@ -75,7 +76,6 @@ function update(req, res) {
 function addCar(req, res) {
   Host.findById(req.params.id)
   .then(host => {
-    console.log(host);
     host.cars.push(req.body)
     host.save()
     .then(() => {
@@ -112,25 +112,33 @@ function carsIndex(req, res) {
   })
 }
 
-
-
-
-
-
-
-// function carsIndex(req, res) {
-//   Host.cars.find({})
-//   .then(cars => {
-//     res.render('cars/index', {
-//       cars,
-//       title: "ALL CARS",
+// function showCar(req, res) {
+//   Car.findById(req.params.id)
+//   .populate('user')
+//   .then(car => {
+//     res.render('cars/show', {
+//       title: "Car Detail",
+//       car
 //     })
 //   })
 //   .catch(err => {
 //     console.log(err)
-//     res.redirect("/")
+//     res.redirect("/cars")
 //   })
 // }
+
+function showCar(req, res) {
+  req.body.host = req.user.profile
+  console.log();
+  // Car.create(req.body)
+  // .then(car => {
+  //   car.populate('user')
+  //   res.render(cars/show), {
+  //     title: Car Details,
+  //     car
+  //   }
+  // })
+}
 
 export {
   newHost as new,
@@ -139,5 +147,6 @@ export {
   edit,
   update,
   addCar,
-  carsIndex
+  carsIndex,
+  showCar
 }
