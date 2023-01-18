@@ -4,8 +4,13 @@ div {
   justify-content: center;
 }
 
-img {
+#avatar {
+  margin-left: 133px;
+}
+
+a {
   display: flex;
-  align-items: center;
+  text-decoration: none;
   justify-content: center;
+  background-color: white;
 }

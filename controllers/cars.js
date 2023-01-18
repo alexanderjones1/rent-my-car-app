@@ -14,7 +14,7 @@ function newCar(req, res) {
 }
 
 function create(req, res) {
-  car.create(req.body)
+  Car.create(req.body)
   .then(car => {
     res.redirect(`/hosts/${host._id}`)
   })

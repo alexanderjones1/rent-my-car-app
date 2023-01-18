@@ -9,7 +9,7 @@ const hostSchema = new Schema({
   name: String,
   email: String,
   avatar: String,
-  cars: { type: Schema.Types.ObjectId, ref: 'Car' }
+  cars: [{ type: Schema.Types.ObjectId, ref: 'Car' }]
 }, {
   timestamps: true
 })
