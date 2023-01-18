@@ -14,11 +14,15 @@
         >
         Search for a car!
       </a>
-      <a 
-        href="/hosts/new" <%- title === "New Host" ? 'class="active"' : "" %>
-        >
-        Become A Host
-      </a>
+      <% if (hostProfile) { %>
+        <a href="/hosts/<%= hostProfile._id %>">My account</a>
+      <% } else { %>
+        <a 
+          href="/hosts/new" <%- title === "New Host" ? 'class="active"' : "" %>
+          >
+          Become A Host
+        </a>
+      <% } %>
       </section>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>

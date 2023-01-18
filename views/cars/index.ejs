@@ -17,7 +17,7 @@
       <%# Oh hey, this is an ejs comment! It starts with a # %>
       <% cars.forEach(car => { %>
         <tr>
-          <td><a id="car-link" href="/cars/<%= car._id %>"><%= car.make %></a></td>
+          <td><a id="car-link" href="hosts/<%= car.host %>/cars/<%= car._id %>"><%= car.make %></a></td>
           <td><%= car.model %></td>
           <td><%= car.color  %></td>
           <td><%= `$${car.price}` %></td>

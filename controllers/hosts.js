@@ -17,6 +17,7 @@ function newHost(req, res) {
 function create(req, res) {
   req.body.name = req.user.profile.name
   req.body.email = req.user.email
+  req.body.profile = req.user.profile._id
   req.body.avatar = req.user.profile.avatar
   req.body.eligible = req.body.age > 20 ? true : false
   console.log(req.body);
@@ -32,7 +33,7 @@ function create(req, res) {
 
 function show(req, res) {
   Host.findById(req.params.id)
-  .populate("user")
+  .populate("profile")
   .then(host => {
     res.render('hosts/show', {
       host,
@@ -76,6 +77,7 @@ function update(req, res) {
 function addCar(req, res) {
   Host.findById(req.params.id)
   .then(host => {
+    req.body.host = req.params.id
     host.cars.push(req.body)
     host.save()
     .then(() => {
@@ -112,32 +114,15 @@ function carsIndex(req, res) {
   })
 }
 
-// function showCar(req, res) {
-//   Car.findById(req.params.id)
-//   .populate('user')
-//   .then(car => {
-//     res.render('cars/show', {
-//       title: "Car Detail",
-//       car
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect("/cars")
-//   })
-// }
-
 function showCar(req, res) {
-  req.body.host = req.user.profile
-  console.log();
-  // Car.create(req.body)
-  // .then(car => {
-  //   car.populate('user')
-  //   res.render(cars/show), {
-  //     title: Car Details,
-  //     car
-  //   }
-  // })
+  Host.findById(req.params.hostId)
+  .then (host => {
+    const car = host.cars.id(req.params.carId)
+    res.render('cars/show', {
+      car,
+      title: 'Car Detail'
+    })
+  })
 }
 
 export {

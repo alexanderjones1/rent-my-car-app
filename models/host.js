@@ -14,7 +14,7 @@ const carSchema = new Schema({
 })
 
 const hostSchema = new Schema({
-  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  profile: { type: Schema.Types.ObjectId, ref: 'Profile' },
   age: Number,
   eligible: Boolean,
   name: String,
