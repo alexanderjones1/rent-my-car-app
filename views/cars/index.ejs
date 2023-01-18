@@ -10,7 +10,7 @@
         <th>Make</th>
         <th>Model</th>
         <th>Color</th>
-        <th>Price</th>
+        <th>Daily Rate</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
           <td><%= car.make %></td>
           <td><%= car.model %></td>
           <td><%= car.color  %></td>
-          <td><%= car.price %></td>
+          <td><%= `$${car.price}` %></td>
         </tr>
       <% }) %>
     </tbody>

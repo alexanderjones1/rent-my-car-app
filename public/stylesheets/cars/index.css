@@ -1,0 +1,13 @@
+table {
+  display: flex;
+  flex-direction: column;
+}
+
+td {
+  padding: 5px 30px;
+}
+
+th {
+  padding: 5px 30px;
+  text-decoration: underline;
+}
