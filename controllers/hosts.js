@@ -92,6 +92,46 @@ function addCar(req, res) {
   })
 }
 
+function carsIndex(req, res) {
+  Host.find({})
+  .then(hosts => {
+    let cars = []
+    for (let host of hosts){
+      for (let car of host.cars){
+        cars.push(car)
+      }
+    }
+    res.render('cars/index', {
+      cars,
+      title: "ALL CARS",
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+
+
+
+
+
+
+// function carsIndex(req, res) {
+//   Host.cars.find({})
+//   .then(cars => {
+//     res.render('cars/index', {
+//       cars,
+//       title: "ALL CARS",
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect("/")
+//   })
+// }
+
 export {
   newHost as new,
   create,
@@ -99,4 +139,5 @@ export {
   edit,
   update,
   addCar,
+  carsIndex
 }
