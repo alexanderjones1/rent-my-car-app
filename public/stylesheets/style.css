@@ -78,8 +78,8 @@ main {
 
 .right button {
   border-radius: 50px;
-  padding: 10px;
-  background-color: rgb(116, 88, 209);
+  padding: 10px 20px;
+  background-color: rgb(92, 63, 254);
   color: whitesmoke;
 }
 
