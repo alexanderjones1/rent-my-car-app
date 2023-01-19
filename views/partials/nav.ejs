@@ -12,15 +12,15 @@
         <a 
         href="/cars" <%- title === "ALL CARS" ? 'class="active"' : "" %>
         >
-        Search for a car!
+        Cars
       </a>
       <% if (hostProfile) { %>
-        <a href="/hosts/<%= hostProfile._id %>">My account</a>
+        <a href="/hosts/<%= hostProfile._id %>">Account</a>
       <% } else { %>
         <a 
           href="/hosts/new" <%- title === "New Host" ? 'class="active"' : "" %>
           >
-          Become A Host
+          Become Host
         </a>
       <% } %>
       </section>

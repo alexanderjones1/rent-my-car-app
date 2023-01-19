@@ -43,3 +43,7 @@ main {
 #paths {
   justify-content: flex-end;
 }
+
+a {
+  margin: 0 5px;
+}
