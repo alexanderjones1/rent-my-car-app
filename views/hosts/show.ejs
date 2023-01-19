@@ -4,17 +4,37 @@
 
 <main>
   <h1><%= title %></h1>
-<section>
-  <div><%= host.name %></div>
+<section class="container">
+  <div class="detail"><%= host.name %></div>
+  <div class="detail">
+    <% if (host.equals(hostProfile?._id)) { %>
+      <a id="edit-profile-anchor" href="/hosts/<%= host._id %>/edit">
+        <button id="edit-profile" >Edit Profile</button>
+      </a>
+    <% } %>
+  </div>
+  <div class="detail">
+    <img id="avatar" src="<%= host.avatar %>">
+  </div>
+  <div class="detail"><%= `${host.age} years old.` %></div>
+  <div class="detail"><%= host.email %></div>
+  <div class="detail"><%- host.eligible ? "Eligible to drive!" : "Not eligible to drive until 21 years of age." %></div>
+</section>
+<section class="container">
   <% if (host.equals(hostProfile?._id)) { %>
-    <a href="/hosts/<%= host._id %>/edit">
-      <button>Edit Profile</button>
-    </a>
+    <p>Would you like to add a new car?</p>
+    <form 
+      id="new-form" 
+      action="/hosts/<%= host._id %>/cars" 
+      method="POST">
+      <input placeholder="Make" type="text" name="make" id="make-input">
+      <input placeholder="Model" type="text" name="model" id="model-input">
+      <input placeholder="Color" type="text" name="color" id="color-input">
+      <input placeholder="Daily Rate" type="number" name="price" id="price-input">
+        <button id="add-car" type="submit">Add Car</button>
+    </form>
   <% } %>
-  <img id="avatar" src="<%= host.avatar %>">
-  <div><%= `${host.age} years old.` %></div>
-  <div><%= host.email %></div>
-  <div><%- host.eligible ? "Eligible to drive!" : "Not eligible to drive until 21 years of age." %></div>
+</section>
 
   <h2>Cars</h2>
   <% if (host.cars.length) { %>
@@ -39,18 +59,7 @@
     <h3>No cars have been added to your profile.</h3>
   <% } %>
 
-  <p>Tell me about your car!</p>
-  <form 
-    id="new-form" 
-    action="/hosts/<%= host._id %>/cars" 
-    method="POST">
-    <input placeholder="Make" type="text" name="make" id="make-input">
-    <input placeholder="Model" type="text" name="model" id="model-input">
-    <input placeholder="Color" type="text" name="color" id="color-input">
-    <input placeholder="Daily Rate" type="number" name="price" id="price-input">
-      <button id="add-car" type="submit">Add Car</button>
-  </form>
-</section>
+
 </main>
 
 <%- include("../partials/footer") %>
