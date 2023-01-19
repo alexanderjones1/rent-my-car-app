@@ -34,6 +34,7 @@ function show(req, res) {
   Host.findById(req.params.id)
   .populate("profile")
   .then(host => {
+    console.log(res.locals);
     res.render('hosts/show', {
       host,
       title: "Host Detail"
@@ -117,11 +118,36 @@ function showCar(req, res) {
   Host.findById(req.params.hostId)
   .then (host => {
     const car = host.cars.id(req.params.carId)
-    console.log('THIS IS THE CAR!!!!!!', car);
+    console.log("THIS IS CAR.HOST>>>!!!", car.host);
+    console.log("HERE IS REQ.USER.PROFILE", req.user);
     res.render('cars/show', {
       car,
       title: 'Car Detail'
     })
+  })
+}
+
+function deleteCar(req, res) {
+  Host.findById(req.params.hostId)
+  .then(host => {
+    const car = host.cars.id(req.params.carId)
+    if (car.host.equals(res.locals.hostProfile._id)) {
+      host.cars.remove(car)
+      host.save()
+      .then(()=> {
+        res.redirect(`/hosts/${req.params.hostId}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect(`/hosts/${req.params.hostId}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/hosts/${req.params.hostId}`)
   })
 }
 
@@ -133,5 +159,6 @@ export {
   update,
   addCar,
   carsIndex,
-  showCar
+  showCar,
+  deleteCar as delete,
 }

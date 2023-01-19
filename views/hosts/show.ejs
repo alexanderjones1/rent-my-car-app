@@ -6,9 +6,11 @@
   <h1><%= title %></h1>
 <section>
   <div><%= host.name %></div>
-  <a href="/hosts/<%= host._id %>/edit">
-    <button>Edit Profile</button>
-  </a>
+  <% if (host.equals(hostProfile?._id)) { %>
+    <a href="/hosts/<%= host._id %>/edit">
+      <button>Edit Profile</button>
+    </a>
+  <% } %>
   <img id="avatar" src="<%= host.avatar %>">
   <div><%= `${host.age} years old.` %></div>
   <div><%= host.email %></div>
@@ -22,6 +24,14 @@
         <%= car.model %>
         <%= car.color %>
         <%= `$${car.price}` %>
+        <% if (car.host.equals(hostProfile?._id)) { %>
+          <form 
+            action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class="btn" type="submit">Delete this car</button>
+          </form>
+        <% } %>
         <a href="/hosts/<%= host._id %>/cars/<%= car._id %>">view car</a>
       </ul>
     <% }) %>
