@@ -31,7 +31,7 @@ nav {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,6 +74,13 @@ main {
 
 .right {
   margin-left: auto;
+}
+
+.right button {
+  border-radius: 50px;
+  padding: 10px;
+  background-color: rgb(116, 88, 209);
+  color: whitesmoke;
 }
 
 #paths {

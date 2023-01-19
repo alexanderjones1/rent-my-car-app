@@ -9,7 +9,7 @@
   <div class="detail">
     <% if (host.equals(hostProfile?._id)) { %>
       <a id="edit-profile-anchor" href="/hosts/<%= host._id %>/edit">
-        <button id="edit-profile" >Edit Profile</button>
+        <button class="btn" >Edit Profile</button>
       </a>
     <% } %>
   </div>
@@ -31,7 +31,7 @@
       <input placeholder="Model" type="text" name="model" id="model-input">
       <input placeholder="Color" type="text" name="color" id="color-input">
       <input placeholder="Daily Rate" type="number" name="price" id="price-input">
-        <button id="add-car" type="submit">Add Car</button>
+        <button class="btn" type="submit">Add Car</button>
     </form>
   <% } %>
 </section>
@@ -49,7 +49,7 @@
             action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
             method="POST"
           >
-            <button class="btn" type="submit">Delete this car</button>
+            <button class="btn" type="submit">Remove car</button>
           </form>
         <% } %>
         <a href="/hosts/<%= host._id %>/cars/<%= car._id %>">view car</a>
