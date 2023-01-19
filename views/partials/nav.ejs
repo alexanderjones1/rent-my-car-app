@@ -5,17 +5,15 @@
 <body>
   <nav>
     <% if (user) { %>
-      <section id="logo">
-        <a href="/">Rent-My-Car</a>
-      </section>
+        <a href="/"><i class="fas fa-solid fa-house-chimney fa-2x"></i></a>
       <section id="paths">
         <a 
         href="/cars" <%- title === "ALL CARS" ? 'class="active"' : "" %>
         >
-        Cars
+        <i class="fas fa-solid fa-car-burst fa-2x"></i>
       </a>
       <% if (hostProfile) { %>
-        <a href="/hosts/<%= hostProfile._id %>">Account</a>
+        <a href="/hosts/<%= hostProfile._id %>"><i class="fas fa-regular fa-user fa-2x"></i></a>
       <% } else { %>
         <a 
           href="/hosts/new" <%- title === "New Host" ? 'class="active"' : "" %>
