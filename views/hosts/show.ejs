@@ -22,6 +22,7 @@
         <%= car.model %>
         <%= car.color %>
         <%= `$${car.price}` %>
+        <a href="/hosts/<%= host._id %>/cars/<%= car._id %>">view car</a>
       </ul>
     <% }) %>
   <% } else { %>
