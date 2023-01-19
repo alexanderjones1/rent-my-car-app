@@ -20,7 +20,6 @@ function create(req, res) {
   req.body.profile = req.user.profile._id
   req.body.avatar = req.user.profile.avatar
   req.body.eligible = req.body.age > 20 ? true : false
-  console.log(req.body);
   Host.create(req.body)
   .then(host => {
     res.redirect(`/hosts/${host._id}`)
@@ -118,6 +117,7 @@ function showCar(req, res) {
   Host.findById(req.params.hostId)
   .then (host => {
     const car = host.cars.id(req.params.carId)
+    console.log('THIS IS THE CAR!!!!!!', car);
     res.render('cars/show', {
       car,
       title: 'Car Detail'

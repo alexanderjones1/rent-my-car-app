@@ -4,12 +4,14 @@
 
 <main>
   <h1><%= title %></h1>
+  <img id="avatar" src="<%=  %>">
 <section>
   <div><%= car.make %></div>
   <div><%= car.model %></div>
   <div><%= car.color  %></div>
   <div><%= `$${car.price}` %></div>
 </section>
+<a href=""></a>
 </main>
-
+<a href="/hosts/<%= car.host %>">Hosts Profile</a>
 <%- include("../partials/footer") %>
