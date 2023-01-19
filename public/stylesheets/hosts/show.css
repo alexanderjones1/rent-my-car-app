@@ -4,9 +4,6 @@ div {
   justify-content: center;
 }
 
-#avatar {
-  margin-left: 133px;
-}
 
 a {
   display: flex;
@@ -24,6 +21,15 @@ input {
   margin: 10px;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  
+}
+
 #price-input {
   margin-bottom: 20px;
 }
@@ -31,4 +37,7 @@ input {
 #add-car {
   width: 100px;
   border-radius: 50px;
+}
+#avatar {
+  margin-left: 133px;
 }

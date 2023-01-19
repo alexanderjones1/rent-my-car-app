@@ -17,10 +17,12 @@
   <h2>Cars</h2>
   <% if (host.cars.length) { %>
     <% host.cars.forEach(car => { %>
-      <%= car.make %>
-      <%= car.model %>
-      <%= car.color %>
-      <%= `$${car.price}` %>
+      <ul>
+        <%= car.make %>
+        <%= car.model %>
+        <%= car.color %>
+        <%= `$${car.price}` %>
+      </ul>
     <% }) %>
   <% } else { %>
     <h3>No cars have been added to your profile.</h3>
