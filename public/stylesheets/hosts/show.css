@@ -55,10 +55,12 @@
   flex-direction: column;
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: 40px;
 }
 
 #car-details {
   display: flex;
+  flex-wrap: wrap;
   background-color: whitesmoke;
   margin: 20px;
 }
