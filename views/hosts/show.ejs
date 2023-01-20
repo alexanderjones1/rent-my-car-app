@@ -57,7 +57,9 @@
               <div><%= car.color %></div>
               <div><%= `$${car.price}` %></div>
             </div>
-            <div id="car-icon"><i class="fas fa-solid fa-car-side fa-4x"></i></div>
+            <a href="/hosts/<%= host._id %>/cars/<%= car._id %>">
+              <div id="car-icon"><i class="fas fa-solid fa-car-side fa-4x"></i></div>
+            </a>
           </div>
           <div>
             <% if (car.host.equals(hostProfile?._id)) { %>
@@ -69,7 +71,6 @@
               </form>
             <% } %>
           </div>
-          <div><a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">View car</a></div>
         </ul>
       </div>
     <% }) %>
