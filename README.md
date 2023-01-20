@@ -6,11 +6,17 @@ Rent My Car is a car sharing app where users can become hosts and rent their car
 
 ## Technologies used 💻
 
-- CSS                 - Express
-- JavaScript          - Mongoose
-- HTML                - MongoDB
-- Git                 - Whimsicle
-- GitHub              - Trello
+- CSS                 
+- Express
+- JavaScript          
+- Mongoose
+- HTML                
+- MongoDB
+- Git
+- Node.js                 
+- Whimsicle
+- GitHub              
+- Trello
 
 ## Credits 🎬
 
