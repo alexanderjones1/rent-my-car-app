@@ -30,5 +30,5 @@ images frome [Unsplash](https://unsplash.com/)
 - [] As a user, I should be able to see and read all reviews 
 
 ## Planning Materials
-Trello Board [Trello Board](https://trello.com/b/Ly194xkC/rent-my-car)
-Whimsicle [Whimsicle wire frames and ERD](https://whimsical.com/wire-frame-XWDYgzr6xoUq1mrX2iuB3B)
+- [Trello Board](https://trello.com/b/Ly194xkC/rent-my-car)
+- [Whimsicle](https://whimsical.com/wire-frame-XWDYgzr6xoUq1mrX2iuB3B)
