@@ -48,29 +48,30 @@
 <section id="car-details">
   <% if (host.cars.length) { %>
     <% host.cars.forEach(car => { %>
-      
-      <ul>
-        <div id="info-and-icon-row">
-          <div>
-            <div><%= car.make %></div>
-            <div><%= car.model %></div>
-            <div><%= car.color %></div>
-            <div><%= `$${car.price}` %></div>
+      <div id="sqr-display">
+        <ul>
+          <div id="info-and-icon-row">
+            <div>
+              <div><%= car.make %></div>
+              <div><%= car.model %></div>
+              <div><%= car.color %></div>
+              <div><%= `$${car.price}` %></div>
+            </div>
+            <div id="car-icon"><i class="fas fa-solid fa-car-side fa-4x"></i></div>
           </div>
-          <div id="car-icon"><i class="fas fa-solid fa-car-side fa-4x"></i></div>
-        </div>
-        <div>
-          <% if (car.host.equals(hostProfile?._id)) { %>
-            <form 
-              action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
-              method="POST"
-              >
-              <button class="btn" type="submit">Remove car</button>
-            </form>
-          <% } %>
-        </div>
-        <div><a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">View car</a></div>
-      </ul>
+          <div>
+            <% if (car.host.equals(hostProfile?._id)) { %>
+              <form 
+                action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
+                method="POST"
+                >
+                <button class="btn" type="submit">Remove car</button>
+              </form>
+            <% } %>
+          </div>
+          <div><a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">View car</a></div>
+        </ul>
+      </div>
     <% }) %>
   <% } else { %>
     <h3>No cars have been added to your profile.</h3>

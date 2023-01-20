@@ -105,3 +105,13 @@
 #car-icon {
   color: rgb(92, 63, 254);
 }
+
+#car-icon:hover {
+  color:rgb(219, 23, 88);
+  transition: .5s ease-in-out;
+  transform: scale(1.15);
+}
+
+#sqr-display:hover {
+  background-color: lightgrey;
+}
