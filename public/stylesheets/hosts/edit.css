@@ -1,0 +1,32 @@
+#edit-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 180px;
+  width: 320px;
+}
+
+#edit-avatar {
+  padding: 20px;
+}
+
+#name-input {
+  padding: 0 20px 5px 0;
+}
+
+#age-input {
+  padding: 0 20px 5px 0;
+}
+
+#email-input {
+  padding: 0 20px 5px 0;
+}
+
+.btn {
+  background-color: rgb(92, 63, 254);
+  border-radius: 4px;
+  color: whitesmoke;
+  padding: 5px 30px;
+  margin-top: 5px;
+}

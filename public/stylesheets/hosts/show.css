@@ -20,7 +20,9 @@
 #host-details {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 5px 30px 5px 15px;
+  margin-left: 10px;
 }
 
 #edit-btn {

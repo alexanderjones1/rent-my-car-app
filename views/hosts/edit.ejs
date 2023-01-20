@@ -4,19 +4,32 @@
 
 <main>
   <h1><%= title %></h1>
-  <form 
-  id="new-form" 
-  action="/hosts/<%= host._id %>?_method=PUT" 
-  method="POST"
-  >
-  <label for="name-input">Name:</label>
-    <input required type="text" name="name" value="<%= host.name %>" id="name-input">
-    <label for="age-input">Age:</label>
-    <input required type="number" name="age" value="<%= host.age %>" id="age-input">
-    <label for="email-input">Email:</label>
-    <input type="email" name="email" value="<%= host.email %>" id="email-input">
-    <button type="submit">Save</button>
-  </form>
+  <section id="edit-form">
+    <div id="edit-avatar">
+      <img src="<%= host.avatar %>">
+    </div>
+    <form 
+    id="new-form" 
+    action="/hosts/<%= host._id %>?_method=PUT" 
+    method="POST"
+    >
+    <div id="name-input">
+      <div><label for="name-input">Name:</label></div>
+      <div><input required type="text" name="name" value="<%= host.name %>"></div>
+    </div>
+    <div id="age-input">
+      <div><label for="age-input">Age:</label></div>
+      <div><input required type="number" name="age" value="<%= host.age %>"></div>
+    </div>
+    <div id="email-input">
+      <div><label for="email-input">Email:</label></div>
+      <div><input type="email" name="email" value="<%= host.email %>" id="email-input"></div>
+    </div>
+    <div>
+      <button  class="btn" type="submit">Save</button>
+    </div>
+    </form>
+  </section>
 </main>
 
 <%- include("../partials/footer") %>
