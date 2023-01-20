@@ -24,9 +24,12 @@
       </div>
     </section>
   </section>
-<section class="container">
-  <% if (host.equals(hostProfile?._id)) { %>
-    <p>Would you like to add a new car?</p>
+<section id="new-car">
+  <div>
+    <% if (host.equals(hostProfile?._id)) { %>
+      <p>Would you like to add a new car?</p>
+  </div>
+  <div>
     <form 
       id="new-form" 
       action="/hosts/<%= host._id %>/cars" 
@@ -37,31 +40,37 @@
       <input placeholder="Daily Rate" type="number" name="price" id="price-input">
         <button class="btn" type="submit">Add Car</button>
     </form>
+  </div>
   <% } %>
 </section>
 
-  <h2>Cars</h2>
+  <h2>Hosts cars</h2>
+<section id="car-details">
   <% if (host.cars.length) { %>
     <% host.cars.forEach(car => { %>
+      
       <ul>
-        <%= car.make %>
-        <%= car.model %>
-        <%= car.color %>
-        <%= `$${car.price}` %>
-        <% if (car.host.equals(hostProfile?._id)) { %>
+        <div><%= car.make %></div>
+        <div><%= car.model %></div>
+        <div><%= car.color %></div>
+        <div><%= `$${car.price}` %></div>
+        <div>
+          <% if (car.host.equals(hostProfile?._id)) { %>
           <form 
             action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
             method="POST"
           >
             <button class="btn" type="submit">Remove car</button>
           </form>
+        </div>
+        <div><a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">View car</a></div>
         <% } %>
-        <a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">view car</a>
       </ul>
     <% }) %>
   <% } else { %>
     <h3>No cars have been added to your profile.</h3>
   <% } %>
+</section>
 
 
 </main>
