@@ -1,0 +1,39 @@
+#car-detail {
+  display: flex;
+  height: 150px;
+  width: 200px;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#car-detail:hover {
+  background-color: lightgray;
+  transform: scale(1.1);
+}
+
+#description {
+  margin: 20px;
+}
+
+#icon {
+  margin: 20px 20px 20px 0;
+  color: rgb(92, 63, 254);
+}
+
+#view-host {
+  background-color: rgb(92, 63, 254);
+  border: solid 1px black;
+  border-radius: 4px;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 5px 30px;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+  'Helvetica Neue', sans-serif;
+  margin-top: 10px;
+}
+
+#view-host:hover {
+  transform: scale(1.1);
+}

@@ -8,6 +8,7 @@ const carSchema = new Schema({
   color: String,
   price: String,
   avatar: String,
+  name: String,
   host: {type: Schema.Types.ObjectId, ref: 'Profile'},
   renters: { type: Schema.Types.ObjectId, ref: 'Renter' },
 }, {

@@ -102,6 +102,7 @@ function carsIndex(req, res) {
     for (let host of hosts){
       for (let car of host.cars){
         car.avatar = req.user.profile.avatar
+        car.name = req.user.profile.name
         cars.push(car)
       }
     }
@@ -120,8 +121,6 @@ function showCar(req, res) {
   Host.findById(req.params.hostId)
   .then (host => {
     const car = host.cars.id(req.params.carId)
-    console.log("THIS IS CAR.HOST>>>!!!", car.host);
-    console.log("HERE IS REQ.USER.PROFILE", req.user);
     res.render('cars/show', {
       car,
       title: 'Car Detail'
