@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  opacity: 90%;
 }
 
 #car-detail:hover {
@@ -32,6 +33,7 @@
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
   'Helvetica Neue', sans-serif;
   margin-top: 10px;
+  opacity: 90%;
 }
 
 #view-host:hover {

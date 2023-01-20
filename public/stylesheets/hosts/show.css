@@ -9,6 +9,8 @@
   height: 250px;
   background-color: whitesmoke;
   align-items: center;
+  opacity: 90%;
+  border-radius: 5px;
 }
 
 #avatar {
@@ -58,6 +60,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 40px;
+  opacity: 80%;
 }
 
 #car-details {
@@ -65,8 +68,18 @@
   flex-wrap: wrap;
   background-color: whitesmoke;
   margin: 20px;
+  opacity: 90%;
+  border-radius: 5px;
 }
 
 #car-details div {
   margin: 10px;
+}
+
+#add-car-prompt {
+  background-color: whitesmoke;
+  opacity: 95%;
+  width: 260px;
+  padding: 0 8px;
+  border-radius: 4px;
 }

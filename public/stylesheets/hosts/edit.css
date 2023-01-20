@@ -5,6 +5,8 @@
   background-color: whitesmoke;
   height: 180px;
   width: 320px;
+  border-radius: 10px;
+  opacity: 90%;
 }
 
 #edit-avatar {

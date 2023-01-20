@@ -6,6 +6,8 @@
   justify-content: space-between;
   align-items: center;
   width: 350px;
+  border-radius: 10px;
+  opacity: 90%;
 }
 
 #car-link div {
