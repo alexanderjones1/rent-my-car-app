@@ -104,5 +104,9 @@ main {
 
 #introduction {
   text-align: center;
+  background-color: whitesmoke;
+  padding: 0 10px;
+  border-radius: 10px;
+  opacity: 90%;
   
 }

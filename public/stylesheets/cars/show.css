@@ -39,3 +39,10 @@
 #view-host:hover {
   transform: scale(1.1);
 }
+
+#title {
+  background-color: whitesmoke;
+  padding: 0 10px;
+  border-radius: 10px;
+  opacity: 90%;
+}
