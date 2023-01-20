@@ -56,15 +56,15 @@
         <div><%= `$${car.price}` %></div>
         <div>
           <% if (car.host.equals(hostProfile?._id)) { %>
-          <form 
-            action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
-            method="POST"
-          >
-            <button class="btn" type="submit">Remove car</button>
-          </form>
+            <form 
+              action="/hosts/<%= host._id %>/cars/<%= car._id %>?_method=DELETE"
+              method="POST"
+              >
+              <button class="btn" type="submit">Remove car</button>
+            </form>
+          <% } %>
         </div>
         <div><a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">View car</a></div>
-        <% } %>
       </ul>
     <% }) %>
   <% } else { %>
