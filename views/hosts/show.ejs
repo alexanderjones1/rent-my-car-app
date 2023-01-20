@@ -4,22 +4,26 @@
 
 <main>
   <h1><%= title %></h1>
-<section id="hero">
-  <div class="detail"><%= host.name %></div>
-  <div class="detail">
-    <% if (host.equals(hostProfile?._id)) { %>
-      <a id="edit-profile-anchor" href="/hosts/<%= host._id %>/edit">
-        <button class="btn" >Edit Profile</button>
-      </a>
-    <% } %>
-  </div>
-  <div class="detail">
-    <img id="avatar" src="<%= host.avatar %>">
-  </div>
-  <div class="detail"><%= `${host.age} years old.` %></div>
-  <div class="detail"><%= host.email %></div>
-  <div class="detail"><%- host.eligible ? "Eligible to drive!" : "Not eligible to drive until 21 years of age." %></div>
-</section>
+  <section id="background">
+    <section id="hero">
+      <div id="avatar">
+        <img src="<%= host.avatar %>">
+      </div>
+      <div id="host-details">
+        <div><%= host.name %></div>
+        <div><%= `${host.age} years old.` %></div>
+        <div><%= host.email %></div>
+        <div><%- host.eligible ? "Eligible to drive!" : "Not eligible to drive until 21 years of age." %></div>
+        <a href="/hosts/<%= host._id %>/edit">
+          <div id="edit-btn"
+            <% if (host.equals(hostProfile?._id)) { %>
+              <button class="btn" >Edit Profile</button>
+            <% } %>
+          </div>
+        </a>
+      </div>
+    </section>
+  </section>
 <section class="container">
   <% if (host.equals(hostProfile?._id)) { %>
     <p>Would you like to add a new car?</p>
@@ -52,7 +56,7 @@
             <button class="btn" type="submit">Remove car</button>
           </form>
         <% } %>
-        <a href="/hosts/<%= host._id %>/cars/<%= car._id %>">view car</a>
+        <a class="view-car-link" href="/hosts/<%= host._id %>/cars/<%= car._id %>">view car</a>
       </ul>
     <% }) %>
   <% } else { %>

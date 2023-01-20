@@ -1,6 +1,45 @@
+#background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  display: flex;
+  height: 250px;
+  background-color: whitesmoke;
+  align-items: center;
+}
+
+#avatar {
+  display: flex;
+  height: 200px;
+  margin: 5px 15px 5px 30px;
+}
+
+#host-details {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 30px 5px 15px;
+}
+
+#edit-btn {
+  margin-top: 50px;
+}
+
 .btn {
   background-color: rgb(92, 63, 254);
   border-radius: 4px;
   color: whitesmoke;
   padding: 5px 30px;
+}
+
+.view-car-link {
+  text-decoration: none;
+  color: rgb(92, 63, 254);
+  transition: .5s;
+}
+.view-car-link:hover {
+  scale: 1.5;
+  font-style: oblique;
 }

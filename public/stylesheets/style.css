@@ -25,6 +25,7 @@ nav {
   color: #1a1a1a;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
   min-height: 60px;
 }
@@ -78,6 +79,7 @@ main {
 
 .right button {
   border-radius: 50px;
+  border: none;
   padding: 10px 20px;
   background-color: rgb(92, 63, 254);
   color: whitesmoke;
@@ -88,5 +90,14 @@ main {
 }
 
 #new-host {
-  color: rgb(92, 63, 254);
+  border-radius: 50px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(219, 23, 88);
+  color: whitesmoke;
+}
+
+#introduction {
+  text-align: center;
+  
 }

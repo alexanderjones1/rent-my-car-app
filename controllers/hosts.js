@@ -4,6 +4,7 @@ import { Host } from '../models/host.js'
 function newHost(req, res) {
   Host.find({})
   .then(hosts => {
+    console.log("this is the hosts avatar", hosts.avatar);
     res.render('hosts/new', {
       title: "New Host",
       hosts,
