@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <p>Host profile<%= hostProfile?.name %></p>
+  <h1>Host Profile<%= hostProfile?.name %></h1>
   <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>

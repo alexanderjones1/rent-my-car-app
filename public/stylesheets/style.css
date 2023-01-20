@@ -49,7 +49,7 @@ body > nav {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  color: #424748;
+  
 }
 
 #paths > a:visited {
@@ -57,12 +57,12 @@ body > nav {
 }
 
 #paths > a:hover {
-  color: white;
-  background-color: #424748;
+  color: rgb(92, 63, 254);
+  transition: .3s;
 }
 
 #paths > a.active {
-  color: white;
+  color: rgb(92, 63, 254);
 }
 
 main {
@@ -87,3 +87,6 @@ main {
   justify-content: flex-end;
 }
 
+#new-host {
+  color: rgb(92, 63, 254);
+}

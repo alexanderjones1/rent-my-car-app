@@ -6,7 +6,7 @@
   <nav>
     <% if (user) { %>
       <section id="paths">
-        <a href="/"><i class="fas fa-solid fa-house-chimney fa-2x"></i></a>
+        <a href="/" <%- title === "Host profile" ? 'class="active"' : "" %>><i class="fas fa-solid fa-house-chimney fa-2x"></i></a>
         <a 
         href="/cars" <%- title === "ALL CARS" ? 'class="active"' : "" %>
         >
@@ -16,9 +16,10 @@
         <a href="/hosts/<%= hostProfile._id %>"><i class="fas fa-regular fa-user fa-2x"></i></a>
       <% } else { %>
         <a 
-          href="/hosts/new" <%- title === "New Host" ? 'class="active"' : "" %>
+          id="new-host"
+          href="/hosts/new"
           >
-          Become Host
+          New Host
         </a>
       <% } %>
       </section>
