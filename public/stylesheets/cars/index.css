@@ -42,5 +42,7 @@ a {
 
 #car-icon:hover {
   color: red;
+  transition: .5s ease-in-out;
+  transform: scale(1.15);
 }
 
