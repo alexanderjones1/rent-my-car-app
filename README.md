@@ -13,3 +13,22 @@ Rent My Car is a car sharing app where users can become hosts and rent their car
 - GitHub              - Trello
 
 ## Credits 🎬
+
+Rent My Car uses..
+icons from [Font Awesome](https://fontawesome.com/)
+images frome [Unsplash](https://unsplash.com/)
+
+## Recent Updates 🛠️
+
+- Add animation and hover effects
+
+## Ice Box 🥶
+
+- [x] Add some animation and hover effects
+- [] Full CRUD for renter model
+- [] As a renter, after using a car, I should be able to leave a review for the car and the host
+- [] As a user, I should be able to see and read all reviews 
+
+## Planning Materials
+Trello Board [Trello Board](https://trello.com/b/Ly194xkC/rent-my-car)
+Whimsicle [Whimsicle wire frames and ERD](https://whimsical.com/wire-frame-XWDYgzr6xoUq1mrX2iuB3B)
