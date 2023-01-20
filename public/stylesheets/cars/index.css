@@ -1,1 +1,26 @@
 
+#cars {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  justify-content: space-between;
+  border: solid 1px lightgray;
+}
+
+#cars > a > div {
+  margin: 5px;
+  border: solid 1px lightgray;
+  width: 400px;
+}
+
+#car-link div {
+  color: black;
+}
+
+#car-link div {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
