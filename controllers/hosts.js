@@ -106,7 +106,7 @@ function carsIndex(req, res) {
     }
     res.render('cars/index', {
       cars,
-      title: "ALL CARS",
+      title: "What interests you?",
     })
   })
   .catch(err => {
