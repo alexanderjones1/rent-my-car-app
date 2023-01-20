@@ -4,13 +4,8 @@
   flex-direction: column;
   background-color: whitesmoke;
   justify-content: space-between;
-  border: solid 1px lightgray;
-}
-
-#cars > a > div {
-  margin: 5px;
-  border: solid 1px lightgray;
-  width: 400px;
+  align-items: center;
+  width: 350px;
 }
 
 #car-link div {
@@ -24,3 +19,28 @@
 a {
   text-decoration: none;
 }
+
+#row {
+  display: flex;
+  border: solid 1px lightgray;
+  width: 350px;
+  border-radius: 10px;
+}
+
+#row:hover {
+  background-color: lightgrey;
+}
+
+#index-avatar {
+  margin: 20px;
+}
+
+#car-icon {
+  margin: 30px 10px 30px 10px;
+  color: rgb(92, 63, 254);
+}
+
+#car-icon:hover {
+  color: red;
+}
+

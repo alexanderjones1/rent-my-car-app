@@ -101,6 +101,7 @@ function carsIndex(req, res) {
     let cars = []
     for (let host of hosts){
       for (let car of host.cars){
+        car.avatar = req.user.profile.avatar
         cars.push(car)
       }
     }
