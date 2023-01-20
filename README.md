@@ -16,7 +16,7 @@ Rent My Car is a car sharing app where users can become hosts and rent their car
 
 Rent My Car uses..
 icons from [Font Awesome](https://fontawesome.com/)
-images frome [Unsplash](https://unsplash.com/)
+images from [Unsplash](https://unsplash.com/)
 
 ## Recent Updates 🛠️
 
