@@ -1,7 +1,7 @@
 #car-detail {
   display: flex;
   height: 150px;
-  width: 200px;
+  width: 400px;
   background-color: whitesmoke;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,6 @@
 
 #car-detail:hover {
   background-color: lightgray;
-  transform: scale(1.1);
 }
 
 #description {
@@ -19,7 +18,7 @@
 }
 
 #icon {
-  margin: 20px 20px 20px 0;
+  margin: 20px;
   color: rgb(92, 63, 254);
 }
 
@@ -36,13 +35,26 @@
   opacity: 90%;
 }
 
-#view-host:hover {
-  transform: scale(1.1);
-}
-
 #title {
   background-color: whitesmoke;
   padding: 0 10px;
   border-radius: 10px;
   opacity: 90%;
+}
+
+#car-and-profile-icon {
+  display: flex;
+  flex-direction: row;
+}
+
+#profile-icon {
+  text-decoration: none;
+  color: rgb(92, 63, 254);
+  margin: 20px;
+}
+
+#profile-icon:hover {
+  color:rgb(219, 23, 88);
+  transition: .5s ease-in-out;
+  transform: scale(1.1);
 }
